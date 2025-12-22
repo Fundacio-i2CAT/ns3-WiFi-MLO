@@ -4,7 +4,7 @@
 Complete
 
 # Description
-This repository contains the **full ns-3 simulator** with modifications for **Wi-Fi Multi-Link Operation (MLO) with Simultaneous Transmission and Reception (STR)**. This project executes the SLA-MLO scheduler proposed in [Paper](https://ieeexplore.ieee.org/document/10454738).
+This repository contains the **Ns-3 simulator Wifi module** with modifications for **Wi-Fi Multi-Link Operation (MLO) with Simultaneous Transmission and Reception (STR)**. This project executes the SLA-MLO scheduler proposed in [Paper](https://ieeexplore.ieee.org/document/10454738).
 
 
 # Pre-requisites
