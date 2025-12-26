@@ -56,7 +56,7 @@ You can change the output location by modifying the following files:
 ```
 
 - The code will generate per-link delay, average delay, and per-STA delay files for different STAs.
-- Currently, the setup supports one flow per STA, but it can be extended to multiple flows if required.
+- Currently, the setup has one flow per STA, but it can be extended to multiple flows if required.
 - Read the code comments for detailed explanations for configurations.
 
 
@@ -110,7 +110,7 @@ This setup supports multi-link configurations, starting from a two-link case.
 
 #### `sta-wifi-mac.cc`
 
-- Sets background STAs on one link (`link1` or `link2`).
+- Sets background STAs on particular link (`link1` or `link2`).
 - Configures **SLA-based flows** that distribute traffic over multiple links based on delay bounds and error thresholds.
 - Calls the **scheduler**, which decides which link to use for transmission.
 - Adds **link ID** in the packet header before enqueueing.
@@ -119,7 +119,6 @@ This setup supports multi-link configurations, starting from a two-link case.
 
 - Implements the **core scheduler logic** for managing two-link operation.
 - Coordinates between links to ensure STR capability and SLA compliance.
-- Interfaces with per-link channel access and frame exchange managers.
 
 ---
 
