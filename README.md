@@ -16,7 +16,7 @@ This repository contains the **Ns-3 simulator Wifi module** with modifications t
 
 ##  Precautions
 
-- NS-3 tracers and other measurement methods may report different delay, throughput, and similar metrics due to variations in how the calculations are performed. Therefore, it is recommended to use the trace files generated directly from the simulation for analysis.
+- NS-3 tracers and other measurement methods may report different delays, throughput, and similar metrics due to variations in how/where the calculations are performed. Therefore, it is recommended to use the trace files generated directly from the simulation for analysis.
 
 
 # How to install it 
@@ -26,20 +26,15 @@ No pre-built binaries are shipped. Follow the official ns-3 installation instruc
 
 ### Step 1: Integrate the MLO Files
 
-You have two options to add the MLO implementation:
-
-1. **Full folder approach**  
-   - Download the entire ns-3 folder with MLO modifications.  
-   - Delete the `CMakeCache.txt` file and the `build/` folder.  
+   - Download NS-3 (V3.36), and it is recommended to install and test it.
+   - Delete the `CMakeCache.txt` file and the `build/` folder.
+   - Replace the original Wi-Fi module in your existing ns-3 installation with the modified files (uploaded here).  
+     ⚠️ Warning: This may cause issues with the latest ns-3 versions.
    - Rebuild ns-3 from scratch using:
      ```bash
      ./ns3 configure --enable-examples --enable-tests
      ./ns3 build
      ```
-
-2. **Replace Wi-Fi module**  
-   - Replace the original Wi-Fi module in your existing ns-3 installation with the modified files.  
-   - ⚠️ Warning: This may cause issues with the latest ns-3 versions.
 
 ### Step 2: Configure Log/Trace File Locations
 
